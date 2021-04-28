@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> </title>
+    <script type="text/javascript">
+        var t = null;
+
+        function starTime() {
+            t = setInterval(function() {
+                var day = new Date();
+                var h = day.getHours();
+                var m = day.getMinutes();
+                var s = day.getSeconds();
+                h = checkTime(h);
+                m = checkTime(m);
+                s = checkTime(s);
+                var time = h + ":" + m + ":" + s;
+                var obj = document.getElementById('time');
+                obj.innerHTML = time;
+            }, 1000);
+            //t=setTimeout('startTime()',1*1*1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            return i;
+        }
+
+        function stopTime() {
+
+            clearInterval(t);
+        }
+    </script>
+</head>
+
+<body onload="starTime();">
+    <div id="time" style="text-align:center; height:50px; line-height:50px;color:red;"></div>
+    <input type="button" value="开始" id="start" onclick="starTime();">
+    <input type="button" value="暂停" id="stop" onclick="stopTime();">
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        
+        .map {
+            width: 747px;
+            height: 617px;
+            background: url(/IMG/map.png) no-repeat center;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        @keyframes pulse {
+            0% {}
+            60% {
+                width: 40px;
+                height: 40px;
+                opacity: 1;
+            }
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+        
+        .dotted {
+            width: 10px;
+            height: 10px;
+            background-color: #09f;
+            border-radius: 50%;
+        }
+        
+        div[class*='pulse'] {
+            width: 10px;
+            height: 10px;
+            box-shadow: 0 0 12px #3792fb;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: pulse 1.5s linear infinite;
+        }
+        /* 
+        下面的pulse2 pulse3是为了实现动画延迟效果
+        注意选择器权重
+         */
+        
+        .pulse2 {
+            animation-delay: .4s !important;
+        }
+        
+        .pulse3 {
+            animation-delay: .8s !important;
+        }
+        
+        .c1 {
+            position: absolute;
+            right: 197px;
+            top: 227px;
+        }
+        
+        .c2 {
+            position: absolute;
+            bottom: 110px;
+            right: 85px;
+        }
+        
+        .c3 {
+            position: absolute;
+            bottom: 75px;
+            right: 198px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+        <div class="c1">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="c2">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <div class="c3">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
