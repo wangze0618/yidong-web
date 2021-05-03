@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 300px;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            position: relative;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+        
+        .box:hover {
+            transform: rotateY(-60deg);
+        }
+        
+        .box div {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .box div:nth-child(1) {
+            background-color: red;
+        }
+        
+        .box div:nth-child(2) {
+            background-color: blue;
+            transform: rotateX(70deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
