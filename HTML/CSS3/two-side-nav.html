@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {}
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        ul>li {
+            width: 120px;
+            height: 35px;
+            display: inline-block;
+            perspective: 500px;
+            margin: 0 10px;
+        }
+        
+        .box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all .4s;
+        }
+        
+        .box:hover {
+            transform: rotateX(90deg);
+        }
+        
+        .f,
+        .b {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .f {
+            background-color: pink;
+            transform: translateZ(17.5px);
+            z-index: 1;
+        }
+        
+        .b {
+            background-color: purple;
+            transform: translateY(17.5px) rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="f">hello</div>
+                <div class="b">world</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="f">hello</div>
+                <div class="b">world</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="f">hello</div>
+                <div class="b">world</div>
+            </div>
+        </li>
+        <li>
+            <div class="box">
+                <div class="f">hello</div>
+                <div class="b">world</div>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>
